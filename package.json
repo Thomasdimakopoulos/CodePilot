@@ -9,9 +9,9 @@
   "description": "A native desktop GUI client for Claude Code",
   "main": "dist-electron/main.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint",
     "electron:dev": "concurrently -k \"next dev\" \"wait-on http://localhost:3000 && electron .\"",
     "electron:build": "next build && node scripts/build-electron.mjs",
